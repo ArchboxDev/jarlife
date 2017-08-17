@@ -1,9 +1,6 @@
 package io.github.lordjbs.jarlife;
 
-import io.github.lordjbs.jarlife.game.classes.HumanStuff;
-import io.github.lordjbs.jarlife.game.internalutil.parsenames;
-
-import static io.github.lordjbs.jarlife.game.internalutil.gameutil.*;
+import io.github.lordjbs.jarlife.game.jarlife_game;
 
 /**
  * @author lordjbs
@@ -19,10 +16,16 @@ public class jarlife {
                 System.exit(0);
             }
         }
+        try {
+            jarlife_game.start();
+        } catch (Exception e) {
 
-        parsenames.parse();
-
-        print("Mennames: " + HumanStuff.men_names.size() + " | Womannames: " + HumanStuff.woman_names.size() + " | afternames: " + HumanStuff.afternames.size());
-
+        } finally {
+            try {
+                jarlife_game.start();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
