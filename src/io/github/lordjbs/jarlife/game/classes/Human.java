@@ -15,26 +15,31 @@ public class Human {
     public String NAME = null;
     public String GENDER = null;
     public int UNIQUE_ID = 0;
+    public AgeType AGE_TYPE = null;
+    public boolean died = false;
+    public Human relationShip;
 
-    public Human() {
+    public Human(AgeType ageType) {
+        this.AGE_TYPE = ageType;
         this.generate();
     }
 
     private void generate() {
         this.GENDER = HumanStuff.genders[random.nextInt(2)];
+        this.generateAge();
+        this.generateUUID();
+        this.generateName();
+    }
+
+    private void generateUUID() {
         int temp = random.nextInt(300);
         if(humans.persons.containsKey(temp)) {
             this.generate();
         }else {
             this.UNIQUE_ID = temp;
-            this.generateName();
-    }
+        }
     }
 
-    public void die() {
-        print("Game | DEATH: " + this.NAME + " " + HumanStuff.deathReasons[random.nextInt(HumanStuff.deathReasons.length + 1)]);
-        humans.persons.remove(this.UNIQUE_ID);
-    }
 
     private void generateName() {
         if(GENDER.equals("men")) {
@@ -49,4 +54,31 @@ public class Human {
             this.NAME = tempname;
         }
     }
+
+    private void generateAge() {
+        switch(this.AGE_TYPE) {
+            case BABY:
+                this.AGE = random.nextInt(2);
+                break;
+            case KID:
+                this.AGE = random.nextInt(13-1) + 1;
+                break;
+            case TEEN:
+                this.AGE = random.nextInt(18-14) + 14;
+                break;
+            case ADULT:
+                this.AGE = random.nextInt(32-18) + 18;
+                break;
+        }
+    }
+
+    public void die() {
+        print("Game | DEATH: " + this.NAME + " " + HumanStuff.deathReasons[random.nextInt(HumanStuff.deathReasons.length + 1)]);
+        this.died = true;
+    }
+
+    public static enum AgeType {
+        BABY,KID,TEEN,ADULT
+    }
+
 }
