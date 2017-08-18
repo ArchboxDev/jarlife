@@ -1,6 +1,6 @@
 package io.github.lordjbs.jarlife.game.internalutil;
 
-import io.github.lordjbs.jarlife.game.classes.HumanStuff;
+import io.github.lordjbs.jarlife.game.innergame.HumanElements;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -30,7 +30,7 @@ public class parsenames {
             String sCurrentLine;
 
             while ((sCurrentLine = br.readLine()) != null) {
-                HumanStuff.men_names.add(sCurrentLine);
+                HumanElements.men_names.add(sCurrentLine);
             }
 
         } catch (IOException e) {
@@ -69,7 +69,7 @@ public class parsenames {
             String sCurrentLine;
 
             while ((sCurrentLine = br.readLine()) != null) {
-                HumanStuff.woman_names.add(sCurrentLine);
+                HumanElements.woman_names.add(sCurrentLine);
             }
 
         } catch (IOException e) {
@@ -94,6 +94,7 @@ public class parsenames {
 
         }
     }
+
     private static void parseAfternames() {
 
         BufferedReader br = null;
@@ -107,7 +108,7 @@ public class parsenames {
             String sCurrentLine;
 
             while ((sCurrentLine = br.readLine()) != null) {
-                HumanStuff.afternames.add(sCurrentLine);
+                HumanElements.afternames.add(sCurrentLine);
             }
 
         } catch (IOException e) {

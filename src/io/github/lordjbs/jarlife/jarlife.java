@@ -1,6 +1,8 @@
 package io.github.lordjbs.jarlife;
 
-import io.github.lordjbs.jarlife.game.jarlife_game;
+import io.github.lordjbs.jarlife.game.kotlin.bootloader;
+
+import static io.github.lordjbs.jarlife.game.internalutil.gameutil.print;
 
 /**
  * @author lordjbs
@@ -17,12 +19,13 @@ public class jarlife {
             }
         }
         try {
-            jarlife_game.start();
+            bootloader.gamestart();
         } catch (Exception e) {
-
+            e.printStackTrace();
+            print("!!Game Error!!");
         } finally {
             try {
-                jarlife_game.start();
+                bootloader.gamestart();
             } catch (Exception e) {
                 e.printStackTrace();
             }

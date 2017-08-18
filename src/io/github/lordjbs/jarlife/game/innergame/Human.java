@@ -1,6 +1,5 @@
-package io.github.lordjbs.jarlife.game.classes;
+package io.github.lordjbs.jarlife.game.innergame;
 
-import io.github.lordjbs.jarlife.game.humans;
 import java.util.Random;
 import static io.github.lordjbs.jarlife.game.internalutil.gameutil.print;
 
@@ -25,7 +24,7 @@ public class Human {
     }
 
     private void generate() {
-        this.GENDER = HumanStuff.genders[random.nextInt(2)];
+        this.GENDER = HumanElements.genders[random.nextInt(2)];
         this.generateAge();
         this.generateUUID();
         this.generateName();
@@ -33,7 +32,7 @@ public class Human {
 
     private void generateUUID() {
         int temp = random.nextInt(300);
-        if(humans.persons.containsKey(temp)) {
+        if(HumanElements.persons.containsKey(temp)) {
             this.generate();
         }else {
             this.UNIQUE_ID = temp;
@@ -45,12 +44,12 @@ public class Human {
         if(GENDER.equals("men")) {
             int temp1 = random.nextInt(123);
             int temp2 = random.nextInt(210);
-            String tempname = HumanStuff.men_names.get(temp1) + " " + HumanStuff.afternames.get(temp2);
+            String tempname = HumanElements.men_names.get(temp1) + " " + HumanElements.afternames.get(temp2);
             this.NAME = tempname;
         }else if(GENDER.equals("woman")) {
             int temp1 = random.nextInt(105);
             int temp2 = random.nextInt(210);
-            String tempname = HumanStuff.woman_names.get(temp1) + " " + HumanStuff.afternames.get(temp2);
+            String tempname = HumanElements.woman_names.get(temp1) + " " + HumanElements.afternames.get(temp2);
             this.NAME = tempname;
         }
     }
@@ -73,7 +72,7 @@ public class Human {
     }
 
     public void die() {
-        print("Game | DEATH: " + this.NAME + " " + HumanStuff.deathReasons[random.nextInt(HumanStuff.deathReasons.length + 1)]);
+        print("Game | DEATH: " + this.NAME + " " + HumanElements.deathReasons[random.nextInt(HumanElements.deathReasons.length + 1)]);
         this.died = true;
     }
 
