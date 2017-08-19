@@ -1,5 +1,6 @@
 package io.github.lordjbs.jarlife.game.innergame;
 
+import java.util.HashMap;
 import java.util.Random;
 import static io.github.lordjbs.jarlife.game.internalutil.gameutil.print;
 
@@ -78,6 +79,23 @@ public class Human {
 
     public static enum AgeType {
         BABY,KID,TEEN,ADULT
+    }
+
+    public static class HumanJobs {
+        public static HashMap<Integer, String> jobs = new HashMap<>();
+        public static HashMap<String, Integer> jobBonus = new HashMap<>();
+
+        public HumanJobs(Human human) {
+
+        }
+
+        private void giveJob(Human human) {
+
+        }
+
+        public static void initJobs() {
+            jobs.put(0, "Artist");
+        }
     }
 
 }
