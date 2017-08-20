@@ -1,11 +1,19 @@
 # jarlife [![Build Status](https://travis-ci.org/ArchboxDev/jarlife.svg?branch=master)](https://travis-ci.org/ArchboxDev/jarlife)
-jarlife - Inspired by Life Simulators from @bubbie and @ry00000!
 
-Only used Java and some Kotlin.
-libs/apis used: NONE.
+# Languages
+This is 100% Java and Kotlin.
+No Libs/APIS used!
 
-checkout:
+# Requirements & Installing
+Java 8+
+I didnt test it for 7 and 6.
 
-jslife @ ArchboxDev/jslife
-pylife @ ArchboxDev/pylife
-cpplife @ ArchboxDev/cpplife
+You can get the Install stuff from [here](https://github.con/ArchboxDev/jarlife/releases)
+There is the normal zip, and the .jar [installer](https://github.com/lordjbs/jarlife_installer).
+
+# Other versions
+
+[Python | ry00000](https://github.com/ArchboxDev/pylife)
+[NodeJS | bubbie](https://github.com/ArchboxDev/jslife)
+[C++ | homonovus](https://github.com/ArchboxDev/cpplife)
+
