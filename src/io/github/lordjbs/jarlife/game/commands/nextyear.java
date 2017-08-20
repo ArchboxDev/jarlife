@@ -6,7 +6,7 @@ import io.github.lordjbs.jarlife.game.game;
  * @author lordjbs
  * Copyright (C) 2017 lordjbs.
  */
-public class nextday implements ICommand {
+public class nextyear implements ICommand {
     @Override
     public void execute(String input) {
         try {
@@ -14,5 +14,15 @@ public class nextday implements ICommand {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public String help() {
+        return "Next year!";
+    }
+
+    @Override
+    public String name() {
+        return "nextyear";
     }
 }

@@ -1,6 +1,7 @@
 package io.github.lordjbs.jarlife.game.innergame;
 
 import io.github.lordjbs.jarlife.game.exceptions.GenerateException;
+import io.github.lordjbs.jarlife.game.internalutil.colours;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -33,7 +34,7 @@ public class HumanElements {
             Human newHuman = new Human(Human.AgeType.ADULT);
             persons.put(newHuman.UNIQUE_ID, newHuman);
             strPersons.put(newHuman.NAME, newHuman);
-            print("Created " + newHuman.NAME + " (" + newHuman.UNIQUE_ID + ")");
+            print(colours.ANSI_GREEN + "Created " + newHuman.NAME + " (" + newHuman.UNIQUE_ID + ")");
         }
 
         createRelationship();

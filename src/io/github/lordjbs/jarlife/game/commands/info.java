@@ -18,16 +18,26 @@ public class info implements ICommand {
             try{
                 int id = Integer.parseInt(arg);
                 human = HumanElements.persons.get(id);
-                String text = "Game | info: Name: " + human.NAME + ", Gender: " + human.GENDER + ", Age: " + human.AGE + ", Relationship: "  + human.relationShip.NAME +  "Unique ID (UUID): " + human.UNIQUE_ID;
+                String text = "info: Name: " + human.NAME + ", Gender: " + human.GENDER + ", Age: " + human.AGE + ", Relationship: "  + human.relationShip.NAME +  "Unique ID (UUID): " + human.UNIQUE_ID;
                 print(text);
             }catch(Exception e) {
                 arg += " " + input.split(" ")[2];
                 human = HumanElements.strPersons.get(arg);
-                String text = "Game | info: Name: " + human.NAME + ", Gender: " + human.GENDER + ", Age: " + human.AGE + ", Relationship: "+ human.relationShip.NAME + ", Unique ID (UUID): " + human.UNIQUE_ID;
+                String text = "info: Name: " + human.NAME + ", Gender: " + human.GENDER + ", Age: " + human.AGE + ", Relationship: "+ human.relationShip.NAME + ", Unique ID (UUID): " + human.UNIQUE_ID;
                 print(text);
             }
         }catch(Exception ex) {
             print("Game | Could not find this ID/Name");
         }
+    }
+
+    @Override
+    public String help() {
+        return "Find a person. Usage: <id/fullname>";
+    }
+
+    @Override
+    public String name() {
+        return "info";
     }
 }

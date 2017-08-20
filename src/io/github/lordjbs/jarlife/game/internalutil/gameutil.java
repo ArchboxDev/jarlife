@@ -6,6 +6,6 @@ package io.github.lordjbs.jarlife.game.internalutil;
  */
 public class gameutil {
     public static void print(String text) {
-        System.out.println(text);
+        System.out.println("Game | " + text + colours.ANSI_RESET);
     }
 }

@@ -1,5 +1,7 @@
 package io.github.lordjbs.jarlife.game.innergame;
 
+import io.github.lordjbs.jarlife.game.internalutil.colours;
+
 import java.util.HashMap;
 import java.util.Random;
 import static io.github.lordjbs.jarlife.game.internalutil.gameutil.print;
@@ -11,7 +13,7 @@ import static io.github.lordjbs.jarlife.game.internalutil.gameutil.print;
 public class Human {
 
     private Random random = new Random();
-    public int AGE = 1;
+    public int AGE = 0;
     public String NAME = null;
     public String GENDER = null;
     public int UNIQUE_ID = 0;
@@ -73,7 +75,7 @@ public class Human {
     }
 
     public void die() {
-        print("Game | DEATH: " + this.NAME + " " + HumanElements.deathReasons[random.nextInt(HumanElements.deathReasons.length + 1)]);
+        print(colours.ANSI_RED + "DEATH: " + this.NAME + " " + HumanElements.deathReasons[random.nextInt(HumanElements.deathReasons.length + 1)]);
         this.died = true;
     }
 

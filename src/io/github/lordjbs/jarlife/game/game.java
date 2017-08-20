@@ -1,6 +1,5 @@
 package io.github.lordjbs.jarlife.game;
 
-import io.github.lordjbs.jarlife.game.commands.ICommand;
 import io.github.lordjbs.jarlife.game.innergame.Human;
 import io.github.lordjbs.jarlife.game.innergame.HumanElements;
 import io.github.lordjbs.jarlife.game.commands.*;
@@ -38,13 +37,14 @@ public class game {
     public static void loadCommands() {
         commands.put("eval", new eval());
         commands.put("info", new info());
-        commands.put("nextday", new nextday());
+        commands.put("nextyear", new nextyear());
         commands.put("quit", new quit());
+        commands.put("help", new help());
     }
 
     public static void newDay() throws Exception {
         year++;
-        print("Game | Year " + year);
+        print("Year " + year);
         Random generator = new Random();
         Object[] values = HumanElements.persons.values().toArray();
 
@@ -77,13 +77,13 @@ public class game {
             int _AGE = human_object.AGE;
             if(_AGE == 1) {
                 human_object.AGE_TYPE = Human.AgeType.KID;
-                print(human_object.NAME  + " is now a KID! (BABY->KID");
+                print(human_object.NAME  + " is now a KID! (BABY->KID)");
             }else if(_AGE == 14) {
                 human_object.AGE_TYPE = Human.AgeType.TEEN;
-                print(human_object.NAME  + " is now a KID! (KID->TEEN");
+                print(human_object.NAME  + " is now a KID! (KID->TEEN)");
             }else if(_AGE == 18) {
                 human_object.AGE_TYPE = Human.AgeType.ADULT;
-                print(human_object.NAME  + " is now a KID! (TEEN->ADULT");
+                print(human_object.NAME  + " is now a KID! (TEEN->ADULT)");
             }
         });
     }

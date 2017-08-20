@@ -11,4 +11,14 @@ public class quit implements ICommand {
     public void execute(String input) {
         System_Utils.exit();
     }
+
+    @Override
+    public String help() {
+        return "quits";
+    }
+
+    @Override
+    public String name() {
+        return "quit";
+    }
 }
