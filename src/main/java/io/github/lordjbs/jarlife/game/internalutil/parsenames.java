@@ -8,7 +8,6 @@ import java.io.IOException;
 
 /**
  * @author lordjbs
- * Copyright (C) 2017 lordjbs.
  */
 public class parsenames {
     public static void parse() {

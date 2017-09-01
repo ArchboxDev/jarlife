@@ -9,7 +9,6 @@ import javax.script.ScriptEngineManager;
 
 /**
  * @author lordjbs
- * Copyright (C) 2017 lordjbs.
  */
 public class eval implements ICommand {
     @Override

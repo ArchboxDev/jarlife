@@ -7,7 +7,6 @@ import static io.github.lordjbs.jarlife.game.internalutil.gameutil.print;
 
 /**
  * @author lordjbs
- * Copyright (C) 2017 lordjbs.
  */
 public class info implements ICommand {
     @Override

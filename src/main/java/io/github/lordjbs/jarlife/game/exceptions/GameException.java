@@ -4,7 +4,6 @@ import java.io.PrintStream;
 
 /**
  * @author lordjbs
- * Copyright (C) 2017 lordjbs.
  */
 public class GameException extends Exception {
 

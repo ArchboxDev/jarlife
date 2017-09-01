@@ -4,7 +4,6 @@ import io.github.lordjbs.jarlife.game.game;
 
 /**
  * @author lordjbs
- * Copyright (C) 2017 lordjbs.
  */
 public class nextyear implements ICommand {
     @Override

@@ -2,7 +2,6 @@ package io.github.lordjbs.jarlife.game.internalutil;
 
 /**
  * @author lordjbs
- * Copyright (C) 2017 lordjbs.
  */
 public class colours {
     public static final String ANSI_RESET = "\u001B[0m";
